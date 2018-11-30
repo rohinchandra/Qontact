@@ -103,14 +103,10 @@ class ScanController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
             guard let readableObject = metadataObject as? AVMetadataMachineReadableCodeObject else { return }
             guard let stringValue = readableObject.stringValue else { return }
             AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
-            found(code: stringValue)
+            createContact(stringValue)
         }
         
         dismiss(animated: true)
-    }
-    
-    func found(code: String) {
-        
     }
     
     override var prefersStatusBarHidden: Bool {
