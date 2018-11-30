@@ -21,6 +21,14 @@ class ProfileCreateController: UIViewController {
     }
     
     @IBAction func saveProfile(_ sender: Any) {
+        // NEED TO ADDRESS LATER THE FORCE UNWRAPPING BY CHECKING FULL NIL VALUES --Zac to do
+        
+        var profile = Profile(givenName: firstName.text!, familyName: lastName.text!, mobilePhoneNumber: phoneNumber.text!)
+        var data =  NSKeyedArchiver.archivedData(withRootObject: profile)
+        UserDefaults.standard.set(data, forKey: "data")
+        
+        var storage: profileStorage = profileStorage()
+        storage.getProfilesFromStore()
     }
     
     /*
