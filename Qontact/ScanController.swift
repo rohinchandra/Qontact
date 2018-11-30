@@ -110,7 +110,7 @@ class ScanController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     }
     
     func found(code: String) {
-        print(code)
+        
     }
     
     override var prefersStatusBarHidden: Bool {
