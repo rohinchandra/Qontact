@@ -46,6 +46,9 @@
                                             <color key="titleColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="Rwo-Et-dmJ" kind="show" identifier="welcome_to_scan" id="EFR-x4-m89"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -112,6 +115,9 @@
                                         <state key="normal" title="Save">
                                             <color key="titleColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="saveProfile:" destination="rnK-dz-419" eventType="touchUpInside" id="6Za-S3-WEK"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -142,6 +148,9 @@
                         <viewLayoutGuide key="safeArea" id="tHW-3k-Bq4"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="Cuj-WM-HBL"/>
+                    <connections>
+                        <segue destination="C0g-0M-2Dc" kind="show" identifier="profile_to_home" id="Q6y-4K-xqV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1mT-hf-4hP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -183,6 +192,9 @@
                                             <color key="titleColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="Rwo-Et-dmJ" kind="show" identifier="home_to_scan" id="ZDq-x6-fEv"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -205,7 +217,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nqt-oA-jsA" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137" y="802"/>
+            <point key="canvasLocation" x="-522" y="937"/>
         </scene>
         <!--PresentController-->
         <scene sceneID="IEB-82-pIE">
@@ -281,7 +293,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h2V-rJ-z9o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="933.60000000000002" y="801.94902548725645"/>
+            <point key="canvasLocation" x="586" y="1638"/>
         </scene>
         <!--ScanController-->
         <scene sceneID="Ker-vs-GMA">
@@ -326,17 +338,26 @@
                                     <action selector="SaveButton:" destination="Rwo-Et-dmJ" eventType="touchUpInside" id="FcP-zR-PVx"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Gz-hP-3bT">
+                                <rect key="frame" x="0.0" y="151" width="375" height="392"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Jjx-ex-Xba"/>
                     </view>
+                    <connections>
+                        <outlet property="previewView" destination="8Gz-hP-3bT" id="1AD-6X-pja"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tKl-6h-VsT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1640.8" y="801.94902548725645"/>
+            <point key="canvasLocation" x="2080.8000000000002" y="877.51124437781118"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="J6o-pl-Qgc"/>
+        <segue reference="bH5-p1-upo"/>
+        <segue reference="ogp-2w-teW"/>
     </inferredMetricsTieBreakers>
 </document>

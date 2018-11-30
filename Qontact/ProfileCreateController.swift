@@ -16,7 +16,9 @@ class ProfileCreateController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func saveProfile(_ sender: Any) {
+    }
+    
     /*
     // MARK: - Navigation
 

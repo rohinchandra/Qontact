@@ -32,6 +32,7 @@ class ScanController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
 
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
+    @IBOutlet weak var previewView: UIView!
     
     enum error: Error{
         case noCameraAvailable
@@ -110,7 +111,7 @@ class ScanController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     }
     
     override var prefersStatusBarHidden: Bool {
-        return true
+        return false
     }
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
