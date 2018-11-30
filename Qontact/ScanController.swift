@@ -125,25 +125,31 @@ class ScanController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
         print("test")
         ContactAuthorizer.authorizeContacts {succeeded in
             if succeeded{
-                self.createContact()
+                self.createContact("zac::::dearing::::214.923.0870")
+                
             } else{
                 print("Not handled")
             }
         }
     }
     
-    func createContact() {
+    func createContact(_ input: String) {
+        var components = input.components(separatedBy: "::::")
+        print(components)
+        
         var store = CNContactStore()
         
-        let fooBar = CNMutableContact()
-        fooBar.givenName = "Foo"
-        fooBar.middleName = "A."
-        fooBar.familyName = "Bar"
-        fooBar.nickname = "Fooboo"
+        var workingContact = CNMutableContact()
+        workingContact.givenName = components[0]
+        workingContact.familyName = components[1]
+        
+        var mobilePhone = CNLabeledValue(label: CNLabelPhoneNumberMobile,
+                                         value: CNPhoneNumber(stringValue: components[2]))
+        workingContact.phoneNumbers = [mobilePhone]
         
         // saving the contact to the contact store
         let request = CNSaveRequest()
-        request.add(fooBar, toContainerWithIdentifier: nil)
+        request.add(workingContact, toContainerWithIdentifier: nil)
         do{
             try store.execute(request)
             print("Successfully stored the contact")
