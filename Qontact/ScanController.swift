@@ -77,7 +77,7 @@ class ScanController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
         previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         previewLayer.frame = view.layer.bounds
         previewLayer.videoGravity = .resizeAspectFill
-        view.layer.addSublayer(previewLayer)
+        self.view.layer.insertSublayer(previewLayer, at: 0)
         
         captureSession.startRunning()
     }
@@ -116,18 +116,6 @@ class ScanController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return .portrait
-    }
-    
-    @IBAction func SaveButton(_ sender: UIButton) {
-        print("test")
-        ContactAuthorizer.authorizeContacts {succeeded in
-            if succeeded{
-                self.createContact("zac::::dearing::::214.923.0870")
-                
-            } else{
-                print("Not handled")
-            }
-        }
     }
     
     func createContact(_ input: String) {

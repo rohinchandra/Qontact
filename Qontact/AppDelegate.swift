@@ -14,7 +14,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        // Condition here:
+        // Change all HomeController to ViewController if profile exists --> else keep as ViewController
+        var exampleViewController: HomeController = mainStoryboard.instantiateViewController(withIdentifier: "HomeController") as! HomeController
+        self.window?.rootViewController = exampleViewController
+        self.window?.makeKeyAndVisible()
+        
         return true
     }
 
