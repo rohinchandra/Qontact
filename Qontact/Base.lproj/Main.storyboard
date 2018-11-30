@@ -70,10 +70,10 @@
             </objects>
             <point key="canvasLocation" x="137" y="105"/>
         </scene>
-        <!--Title-->
+        <!--Profile Create Controller-->
         <scene sceneID="nhi-ju-NCD">
             <objects>
-                <viewController id="rnK-dz-419" sceneMemberID="viewController">
+                <viewController title="Profile Create Controller" id="rnK-dz-419" customClass="ProfileCreateController" customModule="Qontact" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gNI-ah-cIa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -283,10 +283,10 @@
             </objects>
             <point key="canvasLocation" x="933.60000000000002" y="801.94902548725645"/>
         </scene>
-        <!--View Controller-->
+        <!--ScanController-->
         <scene sceneID="Ker-vs-GMA">
             <objects>
-                <viewController id="Rwo-Et-dmJ" sceneMemberID="viewController">
+                <viewController title="ScanController" id="Rwo-Et-dmJ" customClass="ScanController" customModule="Qontact" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mmY-s7-nB4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -318,6 +318,14 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x8w-4I-aX2">
+                                <rect key="frame" x="154" y="491" width="66" height="176"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Test Save"/>
+                                <connections>
+                                    <action selector="SaveButton:" destination="Rwo-Et-dmJ" eventType="touchUpInside" id="FcP-zR-PVx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Jjx-ex-Xba"/>
@@ -325,10 +333,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tKl-6h-VsT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1642" y="802"/>
+            <point key="canvasLocation" x="1640.8" y="801.94902548725645"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="J6o-pl-Qgc"/>
+        <segue reference="ogp-2w-teW"/>
     </inferredMetricsTieBreakers>
 </document>

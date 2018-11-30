@@ -11,10 +11,11 @@
 		761A1FC421B0BC7C0086489B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761A1FC321B0BC7C0086489B /* ViewController.swift */; };
 		761A1FC721B0BC7C0086489B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 761A1FC521B0BC7C0086489B /* Main.storyboard */; };
 		761A1FC921B0BC7F0086489B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 761A1FC821B0BC7F0086489B /* Assets.xcassets */; };
-		761A1FCC21B0BC7F0086489B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 761A1FCA21B0BC7F0086489B /* LaunchScreen.storyboard */; };
 		761A1FD721B0BC7F0086489B /* QontactTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761A1FD621B0BC7F0086489B /* QontactTests.swift */; };
 		761A1FE221B0BC7F0086489B /* QontactUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761A1FE121B0BC7F0086489B /* QontactUITests.swift */; };
 		76F1858A21B0E0D100008CE9 /* PresentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F1858921B0E0D100008CE9 /* PresentController.swift */; };
+		76F1859721B0FFE400008CE9 /* ProfileCreateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F1859621B0FFE400008CE9 /* ProfileCreateController.swift */; };
+		76F1859921B1028D00008CE9 /* ScanController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F1859821B1028D00008CE9 /* ScanController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +41,6 @@
 		761A1FC321B0BC7C0086489B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		761A1FC621B0BC7C0086489B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		761A1FC821B0BC7F0086489B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		761A1FCB21B0BC7F0086489B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		761A1FCD21B0BC7F0086489B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		761A1FD221B0BC7F0086489B /* QontactTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QontactTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		761A1FD621B0BC7F0086489B /* QontactTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QontactTests.swift; sourceTree = "<group>"; };
@@ -49,6 +49,8 @@
 		761A1FE121B0BC7F0086489B /* QontactUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QontactUITests.swift; sourceTree = "<group>"; };
 		761A1FE321B0BC7F0086489B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76F1858921B0E0D100008CE9 /* PresentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentController.swift; sourceTree = "<group>"; };
+		76F1859621B0FFE400008CE9 /* ProfileCreateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCreateController.swift; sourceTree = "<group>"; };
+		76F1859821B1028D00008CE9 /* ScanController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,9 +105,10 @@
 				761A1FC321B0BC7C0086489B /* ViewController.swift */,
 				76F1858921B0E0D100008CE9 /* PresentController.swift */,
 				761A1FC521B0BC7C0086489B /* Main.storyboard */,
+				76F1859821B1028D00008CE9 /* ScanController.swift */,
 				761A1FC821B0BC7F0086489B /* Assets.xcassets */,
-				761A1FCA21B0BC7F0086489B /* LaunchScreen.storyboard */,
 				761A1FCD21B0BC7F0086489B /* Info.plist */,
+				76F1859621B0FFE400008CE9 /* ProfileCreateController.swift */,
 			);
 			path = Qontact;
 			sourceTree = "<group>";
@@ -232,7 +235,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				761A1FCC21B0BC7F0086489B /* LaunchScreen.storyboard in Resources */,
 				761A1FC921B0BC7F0086489B /* Assets.xcassets in Resources */,
 				761A1FC721B0BC7C0086489B /* Main.storyboard in Resources */,
 			);
@@ -260,6 +262,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				761A1FC421B0BC7C0086489B /* ViewController.swift in Sources */,
+				76F1859721B0FFE400008CE9 /* ProfileCreateController.swift in Sources */,
+				76F1859921B1028D00008CE9 /* ScanController.swift in Sources */,
 				76F1858A21B0E0D100008CE9 /* PresentController.swift in Sources */,
 				761A1FC221B0BC7C0086489B /* AppDelegate.swift in Sources */,
 			);
@@ -303,14 +307,6 @@
 				761A1FC621B0BC7C0086489B /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		761A1FCA21B0BC7F0086489B /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				761A1FCB21B0BC7F0086489B /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
