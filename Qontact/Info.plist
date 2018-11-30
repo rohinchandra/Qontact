@@ -43,5 +43,7 @@
 	</array>
 	<key>NSContactsUsageDescription</key>
 	<string>Save contacts.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Scan QR Codes</string>
 </dict>
 </plist>

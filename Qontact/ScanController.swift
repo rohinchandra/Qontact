@@ -30,9 +30,8 @@ public final class ContactAuthorizer{
 
 class ScanController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
 
-    @IBOutlet var videoPreview: UIView!
-    
-    var stringURL = String()
+    var captureSession: AVCaptureSession!
+    var previewLayer: AVCaptureVideoPreviewLayer!
     
     enum error: Error{
         case noCameraAvailable
@@ -42,13 +41,84 @@ class ScanController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        view.backgroundColor = UIColor.black
+        captureSession = AVCaptureSession()
+        
+        guard let videoCaptureDevice = AVCaptureDevice.default(for: .video) else { return }
+        let videoInput: AVCaptureDeviceInput
+        
         do {
-            
+            videoInput = try AVCaptureDeviceInput(device: videoCaptureDevice)
         } catch {
-            print("Failed to scan QR Code")
+            return
         }
-
-        // Do any additional setup after loading the view.
+        
+        if (captureSession.canAddInput(videoInput)) {
+            captureSession.addInput(videoInput)
+        } else {
+            failed()
+            return
+        }
+        
+        let metadataOutput = AVCaptureMetadataOutput()
+        
+        if (captureSession.canAddOutput(metadataOutput)) {
+            captureSession.addOutput(metadataOutput)
+            
+            metadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
+            metadataOutput.metadataObjectTypes = [.qr]
+        } else {
+            failed()
+            return
+        }
+        
+        previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+        previewLayer.frame = view.layer.bounds
+        previewLayer.videoGravity = .resizeAspectFill
+        view.layer.addSublayer(previewLayer)
+        
+        captureSession.startRunning()
+    }
+    
+    func failed() {
+        let ac = UIAlertController(title: "Scanning not supported", message: "Your device does not support scanning a code from an item. Please use a device with a camera.", preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "OK", style: .default))
+        present(ac, animated: true)
+        captureSession = nil
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if (captureSession?.isRunning == false) {
+            captureSession.startRunning()
+        }
+    }
+    
+    func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
+        captureSession.stopRunning()
+        
+        if let metadataObject = metadataObjects.first {
+            guard let readableObject = metadataObject as? AVMetadataMachineReadableCodeObject else { return }
+            guard let stringValue = readableObject.stringValue else { return }
+            AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
+            found(code: stringValue)
+        }
+        
+        dismiss(animated: true)
+    }
+    
+    func found(code: String) {
+        print(code)
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
     }
     
     @IBAction func SaveButton(_ sender: UIButton) {
@@ -87,19 +157,5 @@ class ScanController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
             print("Failed to save the contact. \(err)")
         }
     }
-
-    func captureOutput (_ captureOutput: AVCaptureOutput!,
-                        didOutputMetadataObjects metadataObjects:[Any]!,
-                        from connection: AVCaptureConnection!){
-        if metadataObjects.count > 0 {
-            let machineReadableCode = metadataObjects [0] as!AVMetadataMachineReadableCodeObject
-            if machineReadableCode.type == AVMetadataObject.ObjectType.qr {
-                stringURL = machineReadableCode.stringValue!
-            }
-        }
-        
-    }
-    
-
 
 }
