@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36FB164F21B11B2700F45E8A /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FB164E21B11B2700F45E8A /* Profile.swift */; };
 		761A1FC221B0BC7C0086489B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761A1FC121B0BC7C0086489B /* AppDelegate.swift */; };
 		761A1FC421B0BC7C0086489B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761A1FC321B0BC7C0086489B /* ViewController.swift */; };
 		761A1FC721B0BC7C0086489B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 761A1FC521B0BC7C0086489B /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		36FB164E21B11B2700F45E8A /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		761A1FBE21B0BC7C0086489B /* Qontact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Qontact.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		761A1FC121B0BC7C0086489B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		761A1FC321B0BC7C0086489B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				76F1858921B0E0D100008CE9 /* PresentController.swift */,
 				761A1FC521B0BC7C0086489B /* Main.storyboard */,
 				76F1859821B1028D00008CE9 /* ScanController.swift */,
+				36FB164E21B11B2700F45E8A /* Profile.swift */,
 				761A1FC821B0BC7F0086489B /* Assets.xcassets */,
 				761A1FCD21B0BC7F0086489B /* Info.plist */,
 				76F1859621B0FFE400008CE9 /* ProfileCreateController.swift */,
@@ -262,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				761A1FC421B0BC7C0086489B /* ViewController.swift in Sources */,
+				36FB164F21B11B2700F45E8A /* Profile.swift in Sources */,
 				76F1859721B0FFE400008CE9 /* ProfileCreateController.swift in Sources */,
 				76F1859921B1028D00008CE9 /* ScanController.swift in Sources */,
 				76F1858A21B0E0D100008CE9 /* PresentController.swift in Sources */,
