@@ -13,6 +13,7 @@ class PresentController: UIViewController {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var btnAction: UIButton!
     @IBOutlet weak var imgQRCode: UIImageView!
+    
     var qrcodeImage: CIImage!
     
     override func viewDidLoad() {
@@ -21,7 +22,7 @@ class PresentController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func performButtonAction(sender: AnyObject) {
+    @IBAction func performButtonActionWithSender(_ sender: UIButton) {
         var qrcodeImage: CIImage!
         if qrcodeImage == nil {
             if textField.text == "" {

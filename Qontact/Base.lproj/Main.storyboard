@@ -150,7 +150,7 @@
         <!--View Controller-->
         <scene sceneID="VRU-Ab-JS1">
             <objects>
-                <viewController id="C0g-0M-2Dc" customClass="ViewController" customModule="Qontact" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="C0g-0M-2Dc" customClass="ViewController" customModule="Qontact" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GDJ-w0-uCh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -172,7 +172,7 @@
                                             <color key="titleColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="Kny-mV-M1z" kind="show" identifier="home_to_present" id="w3j-MS-zb4"/>
+                                            <segue destination="Kny-mV-M1z" kind="show" id="J6o-pl-Qgc"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="okF-Zr-vHH">
@@ -210,18 +210,15 @@
         <!--PresentController-->
         <scene sceneID="IEB-82-pIE">
             <objects>
-                <viewController title="PresentController" id="Kny-mV-M1z" customClass="PresentController" customModule="Qontact" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="PresentController" id="Kny-mV-M1z" customClass="PresentController" customModule="Qontact" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qj5-35-u4o">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p3P-OJ-KyH">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p3P-OJ-KyH">
                                 <rect key="frame" x="16" y="28" width="187" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="B8z-MB-aD8"/>
-                                    <constraint firstAttribute="width" constant="274" id="Hw4-1D-lp3"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Scan">
                                     <color key="titleColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -230,13 +227,10 @@
                                     <segue destination="Rwo-Et-dmJ" kind="show" identifier="present_to_scan" id="bH5-p1-upo"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Present" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="njP-UP-exO">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Present" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="njP-UP-exO">
                                 <rect key="frame" x="334.5" y="28" width="308.5" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="0.37989656690140844" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="59" id="hTn-7f-z2i"/>
-                                    <constraint firstAttribute="height" constant="40" id="uhj-gw-dnV"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -248,12 +242,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iGg-mY-xWB">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iGg-mY-xWB">
                                 <rect key="frame" x="16" y="104" width="343" height="300"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="0Au-kP-rj8"/>
-                                    <constraint firstAttribute="width" secondItem="iGg-mY-xWB" secondAttribute="height" multiplier="20:23" id="I6I-Wn-pzt"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u6R-L0-Fqk">
                                 <rect key="frame" x="139" y="436" width="97" height="30"/>
@@ -261,14 +252,14 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="asdf:" destination="CT9-QQ-4eg" eventType="editingDidEnd" id="E90-Tu-hkH"/>
-                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="07X-EL-RLb">
                                 <rect key="frame" x="155" y="490" width="64" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Generate"/>
+                                <connections>
+                                    <action selector="performButtonActionWithSender:" destination="Kny-mV-M1z" eventType="touchUpInside" id="mj6-Y9-0CN"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Present" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vl2-NH-jOw">
                                 <rect key="frame" x="207" y="28" width="167.5" height="40"/>
@@ -285,11 +276,10 @@
                     <connections>
                         <outlet property="btnAction" destination="07X-EL-RLb" id="Zqh-uk-frs"/>
                         <outlet property="imgQRCode" destination="iGg-mY-xWB" id="JEC-GI-LAR"/>
-                        <outlet property="text" destination="u6R-L0-Fqk" id="umT-wx-Nwk"/>
+                        <outlet property="textField" destination="u6R-L0-Fqk" id="SMM-Bo-FmM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h2V-rJ-z9o" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="CT9-QQ-4eg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="933.60000000000002" y="801.94902548725645"/>
         </scene>
@@ -339,6 +329,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="w3j-MS-zb4"/>
+        <segue reference="J6o-pl-Qgc"/>
     </inferredMetricsTieBreakers>
 </document>
