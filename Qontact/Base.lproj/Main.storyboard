@@ -149,6 +149,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="Cuj-WM-HBL"/>
                     <connections>
+                        <outlet property="firstName" destination="KMs-4D-fya" id="26y-h6-KxO"/>
+                        <outlet property="lastName" destination="FG8-Qp-H4Z" id="Ws8-HX-zhs"/>
+                        <outlet property="phoneNumber" destination="4cl-68-6yT" id="waL-dx-Ntc"/>
+                        <outlet property="saveButton" destination="XIy-l3-MTb" id="gYk-tI-Fnj"/>
                         <segue destination="C0g-0M-2Dc" kind="show" identifier="profile_to_home" id="Q6y-4K-xqV"/>
                     </connections>
                 </viewController>
