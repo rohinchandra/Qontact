@@ -266,21 +266,6 @@
                                 <rect key="frame" x="16" y="104" width="343" height="300"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u6R-L0-Fqk">
-                                <rect key="frame" x="139" y="436" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="07X-EL-RLb">
-                                <rect key="frame" x="155" y="490" width="64" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Generate"/>
-                                <connections>
-                                    <action selector="performButtonActionWithSender:" destination="Kny-mV-M1z" eventType="touchUpInside" id="mj6-Y9-0CN"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Present" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vl2-NH-jOw">
                                 <rect key="frame" x="214" y="28" width="112" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -309,14 +294,13 @@
                         <viewLayoutGuide key="safeArea" id="x7Q-Dg-NaF"/>
                     </view>
                     <connections>
-                        <outlet property="btnAction" destination="07X-EL-RLb" id="Zqh-uk-frs"/>
                         <outlet property="imgQRCode" destination="iGg-mY-xWB" id="JEC-GI-LAR"/>
-                        <outlet property="textField" destination="u6R-L0-Fqk" id="SMM-Bo-FmM"/>
+                        <segue destination="rnK-dz-419" kind="show" identifier="present_to_profileCreate" id="0C1-1Q-ZfG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h2V-rJ-z9o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="584.79999999999995" y="1637.6311844077961"/>
+            <point key="canvasLocation" x="633" y="967"/>
         </scene>
         <!--ScanController-->
         <scene sceneID="Ker-vs-GMA">
@@ -371,5 +355,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="bH5-p1-upo"/>
         <segue reference="J6o-pl-Qgc"/>
+        <segue reference="0C1-1Q-ZfG"/>
     </inferredMetricsTieBreakers>
 </document>

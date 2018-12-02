@@ -31,8 +31,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         // Change all HomeController to ViewController if profile exists --> else keep as ViewController
-
-        
         return true
     }
 

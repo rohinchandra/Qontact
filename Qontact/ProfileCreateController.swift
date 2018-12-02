@@ -24,14 +24,10 @@ class ProfileCreateController: UIViewController {
         // NEED TO ADDRESS LATER THE FORCE UNWRAPPING BY CHECKING FULL NIL VALUES --Zac to do
         
         var profile = Profile(givenName: firstName.text!, familyName: lastName.text!, mobilePhoneNumber: phoneNumber.text!)
-        print(profile.encodedString())
 
         var data = try! NSKeyedArchiver.archivedData(withRootObject: profile, requiringSecureCoding: false)
         UserDefaults.standard.set(data, forKey: "SavedProfiles")
-        print(data)
         
-        var storage: profileStorage = profileStorage()
-        storage.getProfilesFromStore()
         performSegue(withIdentifier: "profile_to_home", sender: (Any).self);
     }
     

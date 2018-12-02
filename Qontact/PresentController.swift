@@ -10,8 +10,8 @@ import UIKit
 
 class PresentController: UIViewController {
 
-    @IBOutlet weak var textField: UITextField!
-    @IBOutlet weak var btnAction: UIButton!
+//    @IBOutlet weak var textField: UITextField!
+//    @IBOutlet weak var btnAction: UIButton!
     @IBOutlet weak var imgQRCode: UIImageView!
     
     var qrcodeImage: CIImage!
@@ -19,28 +19,50 @@ class PresentController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        var storage: profileStorage = profileStorage()
+        let savedProfile: Profile? = storage.getProfilesFromStore()
+        if (savedProfile == nil)
+        {
+            // Profile doesn't exist, go to ProfileCreateController
+            performSegue(withIdentifier: "present_to_profileCreate", sender: (Any).self);
+        } else {
+            // Saved Profile exists, generate QR code
+            // savedProfile!.encodedString()
+            var qrcodeImage: CIImage!
+            if qrcodeImage == nil {
+                let data = savedProfile!.encodedString().data(using: String.Encoding.isoLatin1, allowLossyConversion: false)
+                let filter = CIFilter(name: "CIQRCodeGenerator")
+                
+                filter!.setValue(data, forKey: "inputMessage")
+                filter!.setValue("Q", forKey: "inputCorrectionLevel")
+                
+                qrcodeImage = filter!.outputImage
+                imgQRCode.image = UIImage(ciImage: qrcodeImage)
+            }
+        }
+        
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func performButtonActionWithSender(_ sender: UIButton) {
-        var qrcodeImage: CIImage!
-        if qrcodeImage == nil {
-            if textField.text == "" {
-                return
-            }
-            
-            let data = textField.text!.data(using: String.Encoding.isoLatin1, allowLossyConversion: false)
-            
-            let filter = CIFilter(name: "CIQRCodeGenerator")
-            
-            filter!.setValue(data, forKey: "inputMessage")
-            filter!.setValue("Q", forKey: "inputCorrectionLevel")
-            
-            qrcodeImage = filter!.outputImage
-            imgQRCode.image = UIImage(ciImage: qrcodeImage)
-            textField.resignFirstResponder()
-        }
-    }
+//    @IBAction func performButtonActionWithSender(_ sender: UIButton) {
+//        var qrcodeImage: CIImage!
+//        if qrcodeImage == nil {
+//            if textField.text == "" {
+//                return
+//            }
+//
+//            let data = textField.text!.data(using: String.Encoding.isoLatin1, allowLossyConversion: false)
+//
+//            let filter = CIFilter(name: "CIQRCodeGenerator")
+//
+//            filter!.setValue(data, forKey: "inputMessage")
+//            filter!.setValue("Q", forKey: "inputCorrectionLevel")
+//
+//            qrcodeImage = filter!.outputImage
+//            imgQRCode.image = UIImage(ciImage: qrcodeImage)
+//            textField.resignFirstResponder()
+//        }
+//    }
     
 
     /*

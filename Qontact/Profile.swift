@@ -68,11 +68,10 @@ class Profile: NSObject, NSCoding {
 }
 
 class profileStorage {
-    func getProfilesFromStore(){
-        var data = UserDefaults.standard.data(forKey: "SavedProfiles")
+    func getProfilesFromStore() -> Profile?{
+        let data = UserDefaults.standard.data(forKey: "SavedProfiles")
+        let person =  NSKeyedUnarchiver.unarchiveObject(with: data as Data!) as! Profile
         
-        var person =  NSKeyedUnarchiver.unarchiveObject(with: data as Data!) as! Profile
-        print(person.encodedString())
-        
+        return person
     }
 }
