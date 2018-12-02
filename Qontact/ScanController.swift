@@ -123,16 +123,16 @@ class ScanController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     }
     
     func createContact(_ input: String) {
-        var components = input.components(separatedBy: "::::")
-        print(components)
+        //
+        let components = input.components(separatedBy: "::::")
         
-        var store = CNContactStore()
+        let store = CNContactStore()
         
-        var workingContact = CNMutableContact()
+        let workingContact = CNMutableContact()
         workingContact.givenName = components[0]
         workingContact.familyName = components[1]
         
-        var mobilePhone = CNLabeledValue(label: CNLabelPhoneNumberMobile,
+        let mobilePhone = CNLabeledValue(label: CNLabelPhoneNumberMobile,
                                          value: CNPhoneNumber(stringValue: components[2]))
         workingContact.phoneNumbers = [mobilePhone]
         

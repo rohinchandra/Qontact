@@ -16,8 +16,19 @@ class ProfileCreateController: UIViewController {
     @IBOutlet weak var phoneNumber: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        // Check to see if a Saved Profile already exists and if so populate hte fields with the stored values
+        if (UserDefaults.standard.object(forKey: "SavedProfiles") != nil)
+        {
+            // Retrieve stored Profile
+            let storage: profileStorage = profileStorage()
+            let savedProfile: Profile? = storage.getProfilesFromStore()
+            
+            // Populate fields with stored values
+            firstName.text = savedProfile?.givenName
+            lastName.text = savedProfile?.familyName
+            phoneNumber.text = savedProfile?.mobilePhoneNumber
+        }
+    
     }
     
     @IBAction func saveProfile(_ sender: Any) {

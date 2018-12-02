@@ -17,7 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        // Condition here:
         
         if (UserDefaults.standard.object(forKey: "SavedProfiles") != nil)
         {
