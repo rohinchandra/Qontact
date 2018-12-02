@@ -21,17 +21,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if (UserDefaults.standard.object(forKey: "SavedProfiles") != nil)
         {
-            // Profile exists, change to HomeConroller
-            // Change all HomeController to ViewController if profile exists --> else keep as ViewController
-            print("A Saved Profile exits")
+            var exampleViewController: HomeController = mainStoryboard.instantiateViewController(withIdentifier: "HomeController") as! HomeController
+            self.window?.rootViewController = exampleViewController
+            self.window?.makeKeyAndVisible()
         } else {
-            print("no data found")
+            var exampleViewController: ViewController = mainStoryboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+            self.window?.rootViewController = exampleViewController
+            self.window?.makeKeyAndVisible()
         }
         
         // Change all HomeController to ViewController if profile exists --> else keep as ViewController
-        var exampleViewController: ViewController = mainStoryboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
-        self.window?.rootViewController = exampleViewController
-        self.window?.makeKeyAndVisible()
+
         
         return true
     }

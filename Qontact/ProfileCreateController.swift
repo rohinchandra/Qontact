@@ -32,7 +32,7 @@ class ProfileCreateController: UIViewController {
         
         var storage: profileStorage = profileStorage()
         storage.getProfilesFromStore()
-        print("end")
+        performSegue(withIdentifier: "profile_to_home", sender: (Any).self);
     }
     
     /*
