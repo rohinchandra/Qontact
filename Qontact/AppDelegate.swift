@@ -14,9 +14,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
         self.window = UIWindow(frame: UIScreen.main.bounds)
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         // Condition here:
+        
+        if (UserDefaults.standard.object(forKey: "SavedProfiles") != nil)
+        {
+            // Profile exists, change to HomeConroller
+            // Change all HomeController to ViewController if profile exists --> else keep as ViewController
+            print("A Saved Profile exits")
+        } else {
+            print("no data found")
+        }
+        
         // Change all HomeController to ViewController if profile exists --> else keep as ViewController
         var exampleViewController: ViewController = mainStoryboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
         self.window?.rootViewController = exampleViewController
@@ -46,7 +57,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
 
 }
 
