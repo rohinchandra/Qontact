@@ -107,7 +107,11 @@ class ScanController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
             createContact(stringValue)
         }
         
-        dismiss(animated: true)
+        let alert = UIAlertController(title: "Contact Saved!", message: "Check your contacts to see your new connection", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Exit", style: .default, handler: { action in
+            self.performSegue(withIdentifier: "scan_to_home", sender: (Any).self)}))
+        self.present(alert, animated: true)
     }
     
     override var prefersStatusBarHidden: Bool {
@@ -137,7 +141,6 @@ class ScanController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
         request.add(workingContact, toContainerWithIdentifier: nil)
         do{
             try store.execute(request)
-            print("Successfully stored the contact")
         } catch let err{
             print("Failed to save the contact. \(err)")
         }
