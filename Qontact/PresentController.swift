@@ -44,15 +44,6 @@ class PresentController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-//    func displayQRCodeImage() {
-//        let scaleX = imgQRCode.frame.size.width / qrcodeImage.extent().size.height
-//        let scaleY = imgQRCode.frame.size.height / qrcodeImage.extent().size.width
-//
-//        let transformedImage = qrcodeImage.imageByApplyingTransform(CGAffineTransformMakeScale(scaleX, scaleY))
-//
-//        imgQRCode.image = UIImage(CIImage: transformedImage)
-//
-//    }
     
     
 //    @IBAction func performButtonActionWithSender(_ sender: UIButton) {
