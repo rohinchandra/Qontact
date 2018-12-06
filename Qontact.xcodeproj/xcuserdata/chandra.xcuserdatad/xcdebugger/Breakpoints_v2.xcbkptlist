@@ -51,5 +51,83 @@
             landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Qontact/ProfileCreateController.swift"
+            timestampString = "565831043.2244771"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "ProfileCreateController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Qontact.ProfileCreateController.firstName.getter : weak Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "Qontact"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chandra/Chandra_CS50/Qontact/Qontact/ProfileCreateController.swift"
+                  timestampString = "565830835.985184"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "96">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Qontact.ProfileCreateController.firstName.setter : weak Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "Qontact"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chandra/Chandra_CS50/Qontact/Qontact/ProfileCreateController.swift"
+                  timestampString = "565830835.987404"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Qontact.ProfileCreateController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Qontact.ProfileCreateController"
+                  moduleName = "Qontact"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chandra/Chandra_CS50/Qontact/Qontact/ProfileCreateController.swift"
+                  timestampString = "565830835.9899369"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Qontact.ProfileCreateController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Qontact.ProfileCreateController&gt;"
+                  moduleName = "Qontact"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chandra/Chandra_CS50/Qontact/Qontact/ProfileCreateController.swift"
+                  timestampString = "565830835.992272"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "56">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

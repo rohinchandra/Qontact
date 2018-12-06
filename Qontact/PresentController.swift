@@ -44,6 +44,7 @@ class PresentController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    
 //    @IBAction func performButtonActionWithSender(_ sender: UIButton) {
 //        var qrcodeImage: CIImage!
 //        if qrcodeImage == nil {

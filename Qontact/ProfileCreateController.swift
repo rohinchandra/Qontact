@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfileCreateController: UIViewController {
+class ProfileCreateController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var firstName: UITextField!
     @IBOutlet weak var lastName: UITextField!
@@ -29,6 +29,20 @@ class ProfileCreateController: UIViewController {
             phoneNumber.text = savedProfile?.mobilePhoneNumber
         }
     
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        if textField == firstName {
+            firstName.resignFirstResponder()
+            lastName.becomeFirstResponder()
+        } else if textField == lastName {
+            lastName.resignFirstResponder()
+            phoneNumber.becomeFirstResponder()
+        } else if textField == phoneNumber {
+            phoneNumber.resignFirstResponder()
+        }
+        return true
     }
     
     @IBAction func saveProfile(_ sender: Any) {
