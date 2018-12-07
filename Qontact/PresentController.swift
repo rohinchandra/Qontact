@@ -10,15 +10,15 @@ import UIKit
 
 class PresentController: UIViewController {
 
-//    @IBOutlet weak var textField: UITextField!
-//    @IBOutlet weak var btnAction: UIButton!
+    // This is where the QR code will be displayed
     @IBOutlet weak var imgQRCode: UIImageView!
     
+    // Storing the qr code image here before displaying it
     var qrcodeImage: CIImage!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        // Getting profile from storage
         var storage: profileStorage = profileStorage()
         let savedProfile: Profile? = storage.getProfilesFromStore()
         if (savedProfile == nil)
@@ -27,7 +27,7 @@ class PresentController: UIViewController {
             performSegue(withIdentifier: "present_to_profileCreate", sender: (Any).self);
         } else {
             // Saved Profile exists, generate QR code
-            // savedProfile!.encodedString()
+            // Got much of this code from here: https://www.appcoda.com/qr-code-generator-tutorial/
             var qrcodeImage: CIImage!
             if qrcodeImage == nil {
                 let data = savedProfile!.encodedString().data(using: String.Encoding.isoLatin1, allowLossyConversion: false)
@@ -44,27 +44,6 @@ class PresentController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    
-    
-//    @IBAction func performButtonActionWithSender(_ sender: UIButton) {
-//        var qrcodeImage: CIImage!
-//        if qrcodeImage == nil {
-//            if textField.text == "" {
-//                return
-//            }
-//
-//            let data = textField.text!.data(using: String.Encoding.isoLatin1, allowLossyConversion: false)
-//
-//            let filter = CIFilter(name: "CIQRCodeGenerator")
-//
-//            filter!.setValue(data, forKey: "inputMessage")
-//            filter!.setValue("Q", forKey: "inputCorrectionLevel")
-//
-//            qrcodeImage = filter!.outputImage
-//            imgQRCode.image = UIImage(ciImage: qrcodeImage)
-//            textField.resignFirstResponder()
-//        }
-//    }
     
 
     /*

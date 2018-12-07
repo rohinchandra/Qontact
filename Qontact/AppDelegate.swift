@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Qontact
 //
-//  Created by Rob chandra on 11/29/18.
+//  Created by Rohin chandra on 11/29/18.
 //  Copyright © 2018 Rohin chandra. All rights reserved.
 //
 
@@ -13,11 +13,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
+        // This is where we decide what screen to show initially. If a profile already exists,
+        // then show the homeController screen. If not, show a screen with a button to create a profile.
         self.window = UIWindow(frame: UIScreen.main.bounds)
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         
+        // Profile exists
         if (UserDefaults.standard.object(forKey: "SavedProfiles") != nil)
         {
             var exampleViewController: HomeController = mainStoryboard.instantiateViewController(withIdentifier: "HomeController") as! HomeController

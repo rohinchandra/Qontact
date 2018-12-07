@@ -6,6 +6,8 @@
 //  Copyright © 2018 Rohin chandra. All rights reserved.
 //
 
+// Home controller is the screen when you already have a saved profile
+
 import UIKit
 
 class HomeController: UIViewController {

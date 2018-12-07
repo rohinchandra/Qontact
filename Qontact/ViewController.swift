@@ -6,6 +6,8 @@
 //  Copyright © 2018 Rohin chandra. All rights reserved.
 //
 
+// View Controller is the screen when you first download the app
+
 import UIKit
 
 class ViewController: UIViewController {

@@ -10,6 +10,7 @@ import UIKit
 
 class ProfileCreateController: UIViewController, UITextFieldDelegate {
 
+    // Outlets for all our text fields
     @IBOutlet weak var firstName: UITextField!
     @IBOutlet weak var lastName: UITextField!
     @IBOutlet weak var saveButton: UIButton!
@@ -31,6 +32,8 @@ class ProfileCreateController: UIViewController, UITextFieldDelegate {
     
     }
     
+    // This function auto-increments as you're going through the text fields.
+    // Dismisses the keyboard once you have entered phone number
     func textFieldShouldReturn(_ textField: UITextField) -> Bool
     {
         if textField == firstName {
@@ -45,6 +48,8 @@ class ProfileCreateController: UIViewController, UITextFieldDelegate {
         return true
     }
     
+    // Saves the profile of the user into long-term storage
+    // No error checking is done here unfortunately, just saves the information as given
     @IBAction func saveProfile(_ sender: Any) {
         // NEED TO ADDRESS LATER THE FORCE UNWRAPPING BY CHECKING FULL NIL VALUES --Zac to do
         
